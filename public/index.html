@@ -3,9 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>설날 음식 ASCII 변환기</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>드디어 성공</h1>
+    <div class="container">
+        <header class="upload-zone">
+            <h1>🍚 설날 음식 ASCII 변환기 🥩</h1>
+            <p>맛있게 드신 음식 사진을 올려주세요!</p>
+            <label for="imageInput" class="sr-only">이미지 선택</label>
+            <input type="file" id="imageInput" accept="image/jpeg, image/png">
+        </header>
+
+        <canvas id="processCanvas"></canvas>
+        <main class="result-zone">
+            <pre id="asciiOutput">여기에 결과가 나타납니다...</pre>
+        </main>
+
+        <footer class="bottom-zone">
+            <button id="copyBtn">📋 클립보드에 복사</button>
+            <button id="downloadBtn">💾 텍스트 파일로 저장</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
